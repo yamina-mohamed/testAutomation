@@ -15,11 +15,11 @@ public class HomeTest extends BaseTest {
         signUpLoginPage= homePage.clickOnSignupLoginPage();
         Assert.assertTrue(signUpLoginPage.checkNewUserTextVisibility());
         signUpLoginPage.enterName("so8nn");
-        signUpLoginPage.enterEmailAddress("so8nn10@gmail.com");
+        signUpLoginPage.enterEmailAddress("so8nn11@gmail.com");
         LoginFormPage loginFormPage=signUpLoginPage.clickOnSignup();
         Boolean isTitleDisplayed=loginFormPage.checkTitleExistence();
         Assert.assertTrue(isTitleDisplayed);
-        loginFormPage.fillAccountInformationForm("","so8nn10@gmail.com","1234567");
+        loginFormPage.fillAccountInformationForm("","so8nn11@gmail.com","1234567");
         AccountCreatedConfirmationPage accountCreatedConfirmationPage=loginFormPage.createAccount();
        Assert.assertTrue(accountCreatedConfirmationPage.verifyTitleVisibility());
         ProductsPage productsPage= accountCreatedConfirmationPage.clickContinue();
